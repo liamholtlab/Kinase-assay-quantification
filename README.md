@@ -1,2 +1,6 @@
 # Kinase-assay-quantification
-These codes are used in the paper of Sang et al. "Condensed - Phase Signaling Can Expand Kinase Specificity and Respond to Macromolecular Crowding"
+These MATLAB codes are used in the paper of Sang et al. "Condensed - Phase Signaling Can Expand Kinase Specificity and Respond to Macromolecular Crowding".
+
+There are two folders for different sets of codes. One is "Droplet properties analyses", which analyzes the properties of droplets including the mean pixel intensity, total droplet intensity, number of droplets etc. using the output xml files saved from FIJI plugin 'Trackmate' using its particle detection function. The main call function is "Save_TrackMatedata_xml_batch_data.m", which would save the droplet information within an excel file.
+
+The other one is "GEM & Ribosome concentration analyses", which analyzes the diffusion properties of Genetically encoded nanoparticles (GEM) expressed within the cells. The main call function is "result_difusion_modi_Tong.m", which uses the output csv files of particles trajectories saved from FIJI plugin 'Mosaic'. The median value of effective diffusion constants under different conditions can then be calculated using "Get_Deff_Median.m". Relative ribosome concentrations can also be calculated based on the effective diffusion constants using 'Ribosome_concentration_calculation.m'.Additionally, particle trajecotries can be plotted using "Rainbow_tracks_plots.m".
